@@ -31,12 +31,10 @@ void loop() {
   //byte msg[] = {0x02,   0x03,          0x00,           0x02,           0x00,              0x01,               0x25,     0xF9}; //ед, измерения 02
   
   //byte msg[] = {0x01,   0x03,          0x00,           0x04,           0x00,              0x01,               0xC5,     0xCB}; //померять давление 01
-  //byte msg[] = {0x02,   0x03,          0x00,           0x04,           0x00,              0x01,               0xC5,     0xF8}; //померять давление 02
+  byte msg[] = {0x02,   0x03,          0x00,           0x04,           0x00,              0x01,               0xC5,     0xF8}; //померять давление 02
   
-  //byte msg[] = {0x01,   0x06,          0x00,           0x00,           0x00,              0x02,               0x08,     0x0B}; // адрес на 02
-  //byte msg[] = {0x02,   0x06,          0x00,           0x00,           0x00,              0x01,               0x48,     0x39}; // адрес на 01
-
-  //byte msg[] = {0x02,   0x06,          0x00,           0x02,           0x00,              0x02,               0xA9,     0xF8}; // адрес на 02
+  //byte msg[] = {0x01,   0x06,          0x00,           0x00,           0x00,              0x02,               0x08,     0x0B}; // изменить адрес на 02
+  //byte msg[] = {0x02,   0x06,          0x00,           0x00,           0x00,              0x01,               0x48,     0x39}; // изменить адрес на 01
   
   
   int len = 8;
@@ -82,9 +80,9 @@ void loop() {
   Serial.println();
   Serial.println(); 
   
-  float davlenie = 0;
-  davlenie = float(ByteArray[3]) * 256;
-  davlenie += float(ByteArray[4]);
+  long davlenie = 0;
+  davlenie = long(ByteArray[3]) * 256;
+  davlenie += long(ByteArray[4]);
   Serial.println(davlenie);
                      
 }
