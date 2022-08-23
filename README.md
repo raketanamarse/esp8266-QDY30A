@@ -1,9 +1,9 @@
 # esp8266-QDY30A
-esp8266 QDY30A (sensor pressure)
+esp8266 + QDY30A (sensor pressure)
 
 esp8266 (lolin wemos d1 mini) ----> rs485 (Модуль MAX485) ----> QDY30A ( [Digital Pressure Sensor](https://aliexpress.ru/item/1005002355626150.html?sku_id=12000020268077913) )
 
-В проекте используется датчик растворенного озона QDY30A
+В проекте используется датчик давления QDY30A
 через интерфейс rs485 ([используется конвертер](https://aliexpress.ru/item/32848344535.html?sku_id=65155011742&spm=a2g0o.search.0.0.3f4b15cdODkTN7)) 
 
     wemos d1 mini |  D1 --- RO | Модуль MAX485 
